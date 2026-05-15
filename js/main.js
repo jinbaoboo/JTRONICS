@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mapButton.addEventListener('click', () => {
       const mapUrl = mapButton.dataset.mapUrl;
 
-      if (mapUrl && window.confirm('네이버지도로 보시겠습니까?')) {
+      if (mapUrl) {
         window.location.href = mapUrl;
       }
     });
