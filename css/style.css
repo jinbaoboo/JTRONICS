@@ -1505,6 +1505,52 @@ a.overview-card:hover {
   min-height: 420px;
 }
 
+.naver-map-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  min-height: 420px;
+}
+
+.naver-map-api-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  gap: var(--space-2);
+  place-content: center;
+  padding: var(--space-6);
+  color: var(--color-secondary);
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(1, 0, 255, 0.08), rgba(29, 155, 240, 0.14)),
+    var(--color-bg-soft);
+}
+
+.naver-map-api-fallback strong {
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+}
+
+.naver-info-window {
+  display: grid;
+  gap: 2px;
+  min-width: 180px;
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  line-height: 1.45;
+}
+
+.naver-info-window strong {
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+}
+
+.naver-info-window span {
+  color: var(--color-text-muted);
+}
+
 .naver-map-preview {
   position: absolute;
   inset: 0;
@@ -1884,6 +1930,7 @@ a.overview-card:hover {
 
   .location-map,
   .location-map-image,
+  .naver-map-canvas,
   .naver-map-preview {
     min-height: 360px;
   }
@@ -2283,6 +2330,7 @@ a.overview-card:hover {
 
   .location-map,
   .location-map-image,
+  .naver-map-canvas,
   .naver-map-preview {
     min-height: 280px;
   }

@@ -29,14 +29,16 @@
         <div class="page-heading"><h1 class="section-title">오시는 길</h1></div>
         <div class="location-layout">
           <div class="location-map card">
-            <div class="naver-map-preview" role="img" aria-label="여의도 라이프오피스텔 위치 미리보기">
-              <span class="naver-map-brand">NAVER MAP</span>
-              <span class="naver-map-search">여의도 라이프 오피스텔</span>
-              <span class="naver-map-road naver-map-road-primary" aria-hidden="true"></span>
-              <span class="naver-map-road naver-map-road-secondary" aria-hidden="true"></span>
-              <span class="naver-map-road naver-map-road-river" aria-hidden="true"></span>
-              <span class="naver-map-pin" aria-hidden="true"></span>
-              <strong class="naver-map-place">라이프오피스텔</strong>
+            <div
+              class="naver-map-canvas"
+              id="naver-map"
+              data-lat="37.5196347"
+              data-lng="126.9391505"
+              data-title="라이프오피스텔">
+            </div>
+            <div class="naver-map-api-fallback">
+              <strong>라이프오피스텔</strong>
+              <span>서울특별시 영등포구 63로 40</span>
             </div>
             <button
               class="naver-map-open"
@@ -65,6 +67,7 @@
     </div>
   </footer>
 
+  <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=bgd98tsehg"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

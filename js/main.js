@@ -63,6 +63,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const naverMapElement = document.getElementById('naver-map');
+
+  if (naverMapElement) {
+    if (window.naver?.maps) {
+      const lat = Number(naverMapElement.dataset.lat);
+      const lng = Number(naverMapElement.dataset.lng);
+      const title = naverMapElement.dataset.title || '라이프오피스텔';
+      const position = new window.naver.maps.LatLng(lat, lng);
+      const map = new window.naver.maps.Map(naverMapElement, {
+        center: position,
+        zoom: 17,
+        minZoom: 14,
+        zoomControl: true,
+        zoomControlOptions: {
+          position: window.naver.maps.Position.TOP_RIGHT,
+        },
+      });
+      const marker = new window.naver.maps.Marker({
+        position,
+        map,
+        title,
+      });
+      const infoWindow = new window.naver.maps.InfoWindow({
+        content: `<div class="naver-info-window"><strong>${title}</strong><span>서울특별시 영등포구 63로 40</span></div>`,
+      });
+
+      infoWindow.open(map, marker);
+      naverMapElement.closest('.location-map')?.classList.add('is-map-ready');
+    } else {
+      naverMapElement.closest('.location-map')?.classList.add('is-map-error');
+    }
+  }
+
   document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     const slides = Array.from(carousel.querySelectorAll('.home-carousel-slide'));
     const prevButton = carousel.querySelector('[data-carousel-prev]');
