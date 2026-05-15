@@ -63,6 +63,8 @@ body {
   line-height: var(--line-height-base);
   color: var(--color-text);
   background: var(--color-bg);
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 a {
@@ -102,6 +104,8 @@ h5,
 h6,
 p {
   margin: 0;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 ul,
@@ -109,6 +113,16 @@ ol {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+li,
+dt,
+dd,
+a,
+button,
+span,
+strong {
+  word-break: keep-all;
 }
 
 img {
