@@ -1334,12 +1334,6 @@ a.overview-card:hover {
   text-align: center;
 }
 
-.dgx-product-heading h2 {
-  color: var(--color-secondary);
-  font-size: var(--font-size-xl);
-  line-height: var(--line-height-tight);
-}
-
 .product-detail-card .dgx-product-heading p {
   color: var(--color-primary);
   font-size: var(--font-size-lg);
