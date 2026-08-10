@@ -1260,6 +1260,95 @@ a.overview-card:hover {
   font-weight: 600;
 }
 
+.zoom-product-intro {
+  display: grid;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.zoom-product-intro h2 {
+  color: var(--color-secondary);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: var(--line-height-tight);
+}
+
+.zoom-product-highlight {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  color: var(--color-primary) !important;
+  background: var(--color-bg-soft);
+}
+
+.zoom-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.zoom-service-card {
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-muted);
+}
+
+.zoom-service-card h3 {
+  margin-bottom: var(--space-2);
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-tight);
+}
+
+.zoom-service-card p {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-weight: 500;
+}
+
+.dgx-single-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  overflow: hidden;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+}
+
+.dgx-single-image img {
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+}
+
+.dgx-product-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.dgx-gallery-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  margin: 0;
+  overflow: hidden;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+}
+
+.dgx-gallery-item img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+}
+
 .product-detail-list {
   display: grid;
   gap: var(--space-3);
@@ -2170,6 +2259,20 @@ a.overview-card:hover {
 
   .product-detail-card {
     padding: var(--space-5);
+  }
+
+  .zoom-service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dgx-product-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .dgx-single-image,
+  .dgx-gallery-item {
+    min-height: 0;
+    padding: var(--space-3);
   }
 
   .aura-product-visual,
