@@ -601,6 +601,10 @@ a.overview-card:hover {
   gap: var(--space-5);
 }
 
+.overview-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .overview-card {
   position: relative;
   overflow: hidden;
@@ -1004,6 +1008,11 @@ a.overview-card:hover {
   width: min(100%, 420px);
   max-width: 100%;
   max-height: 86px;
+}
+
+.partner-logo-img-zoom {
+  width: 80%;
+  max-width: 80%;
 }
 
 .partner-logo-fallback {
