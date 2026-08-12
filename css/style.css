@@ -1011,9 +1011,14 @@ a.overview-card:hover {
   max-height: 86px;
 }
 
+.partner-logo-img-aura {
+  width: min(100%, 300px);
+  max-width: min(100%, 300px);
+}
+
 .partner-logo-img-zoom {
-  width: 80%;
-  max-width: 80%;
+  width: min(80%, 260px);
+  max-width: min(80%, 260px);
 }
 
 .partner-logo-fallback {
@@ -1042,18 +1047,18 @@ a.overview-card:hover {
   display: grid;
   gap: var(--space-1);
   justify-items: center;
-  width: 80%;
-  max-width: 80%;
+  width: min(80%, 260px);
+  max-width: min(80%, 260px);
   line-height: 1;
 }
 
 .partner-logo-epson span {
   color: #1226a8;
   font-family: Arial, "Helvetica Neue", sans-serif;
-  font-size: clamp(2.75rem, 18vw, 4.25rem);
-  font-size: clamp(2.75rem, 23cqw, 4.25rem);
+  font-size: clamp(2.75rem, 18vw, 3.75rem);
+  font-size: clamp(2.75rem, 22cqw, 3.75rem);
   font-weight: 900;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   white-space: nowrap;
 }
 
@@ -1118,12 +1123,14 @@ a.overview-card:hover {
 .partner-logo-enterfront {
   display: inline-flex;
   align-items: center;
-  max-width: 100%;
-  padding: var(--space-3) var(--space-4);
+  justify-content: center;
+  width: min(96%, 290px);
+  max-width: min(96%, 290px);
+  padding: var(--space-3) var(--space-2);
   color: #ffffff;
   background: linear-gradient(90deg, #069242 0%, #007331 100%);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.75rem, 3.5vw, 2.875rem);
+  font-size: clamp(2.25rem, 15cqw, 2.875rem);
   font-style: italic;
   font-weight: 900;
   line-height: 1;
@@ -2512,10 +2519,6 @@ a.overview-card:hover {
   }
 
   .aurasemi-word {
-    font-size: 2rem;
-  }
-
-  .partner-logo-enterfront {
     font-size: 2rem;
   }
 
