@@ -151,6 +151,30 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoPlay();
   });
 
+  document.querySelectorAll('[data-image-lightbox-open]').forEach((trigger) => {
+    const dialogId = trigger.dataset.imageLightboxOpen;
+    const dialog = document.getElementById(dialogId);
+    const closeButton = dialog?.querySelector('[data-image-lightbox-close]');
+
+    if (!(dialog instanceof HTMLDialogElement)) {
+      return;
+    }
+
+    trigger.addEventListener('click', () => {
+      dialog.showModal();
+    });
+
+    closeButton?.addEventListener('click', () => {
+      dialog.close();
+    });
+
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) {
+        dialog.close();
+      }
+    });
+  });
+
   if (!header || !menuToggle || !navMenu) {
     return;
   }

@@ -1376,6 +1376,94 @@ a.overview-card:hover {
   object-fit: contain;
 }
 
+.dgx-image-zoom-trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-sm);
+}
+
+.dgx-image-zoom-trigger:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.dgx-image-zoom-hint {
+  position: absolute;
+  right: var(--space-3);
+  bottom: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--color-white);
+  background: rgba(6, 52, 95, 0.88);
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+.dgx-image-zoom-trigger:hover .dgx-image-zoom-hint,
+.dgx-image-zoom-trigger:focus-visible .dgx-image-zoom-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-lightbox {
+  width: min(94vw, 1200px);
+  max-width: none;
+  max-height: 92vh;
+  margin: auto;
+  padding: var(--space-6);
+  border: 0;
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.image-lightbox::backdrop {
+  background: rgba(6, 18, 31, 0.82);
+}
+
+.image-lightbox[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-lightbox img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(92vh - var(--space-8));
+  object-fit: contain;
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: var(--color-white);
+  background: rgba(6, 52, 95, 0.9);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.image-lightbox-close:hover,
+.image-lightbox-close:focus-visible {
+  background: var(--color-primary);
+}
+
 .product-inquiry-note {
   max-width: 920px;
   margin-top: var(--space-5);

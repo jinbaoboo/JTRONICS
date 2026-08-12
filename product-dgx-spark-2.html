@@ -36,12 +36,25 @@
               <img src="assets/images/dgx-spark-2.png" alt="노트북과 함께 배치된 NVIDIA DGX Spark 제품 이미지">
             </figure>
             <figure class="dgx-gallery-item">
-              <img src="assets/images/dgx-spark-2-a.png" alt="NVIDIA DGX Spark 기술 사양">
+              <button
+                class="dgx-image-zoom-trigger"
+                type="button"
+                data-image-lightbox-open="dgx-spark-spec-lightbox"
+                aria-label="NVIDIA DGX Spark 기술 사양 이미지 확대하기"
+              >
+                <img src="assets/images/dgx-spark-2-a.png" alt="NVIDIA DGX Spark 기술 사양">
+                <span class="dgx-image-zoom-hint" aria-hidden="true">이미지 확대</span>
+              </button>
             </figure>
           </div>
         </article>
       </div>
     </section>
+
+    <dialog class="image-lightbox" id="dgx-spark-spec-lightbox" aria-label="NVIDIA DGX Spark 기술 사양 확대 이미지">
+      <button class="image-lightbox-close" type="button" data-image-lightbox-close aria-label="확대 이미지 닫기">&times;</button>
+      <img src="assets/images/dgx-spark-2-a.png" alt="NVIDIA DGX Spark 기술 사양 확대 이미지">
+    </dialog>
   </main>
 
   <footer class="site-footer">
